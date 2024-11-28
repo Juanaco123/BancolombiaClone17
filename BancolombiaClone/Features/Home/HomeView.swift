@@ -14,122 +14,10 @@ struct HomeView: View {
       NavigationStack {
         ScrollView(.vertical) {
           VStack(alignment: .leading, spacing: 0) {
-            //MARK: - Login and dinamic key
-            Text("Buenos días")
-              .padding(.top, 10)
-            
-            HStack {
-              // Dinamic Key
-              HStack {
-                ZStack {
-                  Circle()
-                    .stroke(lineWidth: 5)
-                    .foregroundStyle(Color(UIColor.systemGray5))
-                    .frame(width: 40, height: 40)
-                  
-                  Circle()
-                    .trim(from: 0.0, to: 10)
-                    .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round))
-                    .foregroundStyle(.yellow)
-                    .rotationEffect(.degrees(-90))
-                    .frame(width: 40, height: 40)
-                    .animation(.linear(duration: 10), value: 10)
-                  
-                  Image(systemName: "lock")
-                    .frame(width: 40/2.5, height: 40/2.5)
-                    .foregroundStyle(.blue)
-                }
-                
-                VStack {
-                  Text("Clave dinámica")
-                    .font(.caption)
-                  Text("123456")
-                }
-                Image(systemName: "chevron.forward")
-                
-              }
-              .padding(6)
-              .background(RoundedRectangle(cornerRadius: 25.0).fill(.white).shadow(radius: 1))
-              .padding(.top, 16)
-              
-              Spacer()
-              
-              // Login button
-              HStack {
-                Text("Inicir sesión")
-                  .fontWeight(.bold)
-                Image(.systemLogin)
-                  .resizable()
-                  .frame(width: 20, height: 20)
-              }
-              .foregroundStyle(.white)
-              .padding(10)
-              .background(.black)
-              .clipShape(.rect(cornerRadius: 20))
-            }
-            .padding(.horizontal)
-            
-            //MARK: - Main Transactions
-            VStack(alignment: .leading) {
-              Text("Transacciones principales")
-              ScrollView(.horizontal) {
-                HStack(spacing: 10) {
-                  ForEach((1...5), id: \.self) { item in
-                    Text(String(item))
-                      .frame(width: 85, height: 85, alignment: .center)
-                      .background(.blue)
-                      .cornerRadius(10)
-                      .foregroundColor(.white)
-                      .font(.title)
-                  }
-                }
-              }
-              .scrollIndicators(.hidden)
-            }
-            
-            //MARK: - More categories
-            VStack(alignment: .leading, spacing: 20) {
-              Text("Explora nuestras categorías")
-              LazyVGrid(
-                columns: [GridItem(.adaptive(minimum: 100))],
-                spacing: 10
-              ) {
-                ForEach((1...5), id: \.self) { item in
-                  Text(String(item))
-                    .frame(width: 50, height: 50, alignment: .center)
-                    .background(.blue)
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-                    .font(.title)
-                }
-              }
-              .padding(.vertical)
-              .background(.white)
-            }
-            .padding(.horizontal, 5)
-            .padding(.top, 10)
-            
-            //MARK: - Recommendations
-            VStack(alignment: .leading) {
-              Text("Pensando en ti te recomendamos")
-                .padding(.vertical, 20)
-              ScrollView(.horizontal) {
-                HStack(spacing: 10) {
-                  ForEach((1...5), id: \.self) { item in
-                    Text(String(item))
-                      .frame(width: 370, height: 200, alignment: .center)
-                      .background(.blue)
-                      .cornerRadius(5)
-                      .foregroundColor(.white)
-                      .font(.title)
-                  }
-                }
-              }
-              .scrollIndicators(.hidden)
-              
-            }
-            .padding(.horizontal, 10)
-            .padding(.bottom, 20)
+            mainAction
+            mainTransactions
+            moreCategories
+            recommendations
           }
         }
         .toolbar {
@@ -148,31 +36,184 @@ struct HomeView: View {
           }
         }
       }
-      ZStack {
-        Circle()
-          .foregroundStyle(.white)
-          .frame(width: 60, height: 60)
+      QRButton
+    }
+    .padding(.horizontal, 10)
+  }
+  
+  //MARK: - Login and dinamic key
+  @ViewBuilder
+  var mainAction: some View {
+    VStack(alignment: .leading) {
+      Text("Buenos días")
+        .font(.title)
+        .fontWeight(.thin)
+        .padding(.top, 10)
+      HStack {
+        // Dinamic Key
+        HStack {
+          ZStack {
+            Circle()
+              .stroke(lineWidth: 5)
+              .foregroundStyle(Color(UIColor.systemGray5))
+              .frame(width: 40, height: 40)
+            
+            Circle()
+              .trim(from: 0.0, to: 10)
+              .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round))
+              .foregroundStyle(.yellow)
+              .rotationEffect(.degrees(-90))
+              .frame(width: 40, height: 40)
+              .animation(.linear(duration: 10), value: 10)
+            
+            Image(systemName: "lock")
+              .frame(width: 40/2.5, height: 40/2.5)
+              .foregroundStyle(.blue)
+          }
+          
+          VStack {
+            Text("Clave dinámica")
+              .font(.caption)
+            Text("123456")
+              .kerning(3)
+              .fontWeight(.bold)
+          }
+          Image(systemName: "chevron.forward")
+          
+        }
+        .padding(6)
+        .background(RoundedRectangle(cornerRadius: 25.0).fill(.white).shadow(radius: 1))
+        .offset(y: 25)
         
-        Circle()
-          .stroke(lineWidth: 5)
-          .frame(width: 60, height: 60)
-          .foregroundStyle(.yellow)
+        Spacer()
         
-        Image(systemName: "qrcode.viewfinder")
-          .resizable()
-          .frame(width: 60/2.5, height: 60/2.5)
+        // Login button
+        HStack {
+          Text("Iniciar sesión")
+            .font(.headline)
+            .fontWeight(.bold)
+          Image(.systemLogin)
+            .resizable()
+            .frame(width: 20, height: 20)
+        }
+        .foregroundStyle(.white)
+        .padding(10)
+        .background(.black)
+        .clipShape(.rect(cornerRadius: 20))
+        .offset(y: -30)
       }
-      .offset(x: 150, y: 315)
+    }
+    .padding(.top, 20)
+    .padding(.horizontal)
+    .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
+  }
+  
+  //MARK: - Main Transactions
+  @ViewBuilder
+  var mainTransactions: some View {
+    VStack(alignment: .leading) {
+      Text("Transacciones principales")
+        .font(.headline)
+        .fontWeight(.thin)
+        .padding(.leading, 15)
+      
+      ScrollView(.horizontal) {
+        HStack(spacing: 10) {
+          ForEach((1...5), id: \.self) { item in
+            Text(String(item))
+              .frame(width: 85, height: 100, alignment: .center)
+              .background(.blue)
+              .cornerRadius(10)
+              .foregroundColor(.white)
+              .font(.title)
+          }
+        }
+      }
+      .padding(.top, 10)
+      .scrollIndicators(.hidden)
+      .ignoresSafeArea(.all)
+    }
+    .padding(.top, 60)
+  }
+  
+  //MARK: - More categories
+  @ViewBuilder
+  var moreCategories: some View {
+    VStack(alignment: .leading, spacing: 20) {
+      Text("Explora nuestras categorías")
+        .font(.headline)
+        .fontWeight(.thin)
+        .padding(.leading, 15)
+        .padding(.top, 15)
+      
+      LazyVGrid(
+        columns: [GridItem(.adaptive(minimum: 90))],
+        spacing: 10
+      ) {
+        ForEach((1...5), id: \.self) { item in
+          Text(String(item))
+            .frame(width: 60, height: 70, alignment: .center)
+            .background(.blue)
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .font(.title)
+        }
+      }
+      .padding(.vertical)
+      .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
+    }
+    .padding(.horizontal, 5)
+    .padding(.top, 10)
+  }
+  
+  //MARK: - Recommendations
+  @ViewBuilder
+  var recommendations: some View {
+    VStack(alignment: .leading) {
+      Text("Pensando en ti te recomendamos")
+        .font(.headline)
+        .fontWeight(.thin)
+        .padding(.vertical, 20)
+      
+      // Card View
+      ScrollView(.horizontal) {
+        HStack(spacing: 10) {
+          ForEach((1...5), id: \.self) { item in
+            Text(String(item))
+              .frame(width: 370, height: 200, alignment: .center)
+              .background(.blue)
+              .cornerRadius(5)
+              .foregroundColor(.white)
+              .font(.title)
+          }
+        }
+      }
+      .scrollIndicators(.hidden)
+      .ignoresSafeArea(.all)
       
     }
     .padding(.horizontal, 10)
-    .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
-    .navigationTitle("BankClone")
-    .toolbar {
-      ToolbarItem {
-        
-      }
+    .padding(.bottom, 20)
+  }
+  
+  //MARK: - QR
+  @ViewBuilder
+  var QRButton: some View {
+    ZStack {
+      Circle()
+        .foregroundStyle(.white)
+        .frame(width: 60, height: 60)
+      
+      Circle()
+        .stroke(lineWidth: 5)
+        .frame(width: 60, height: 60)
+        .foregroundStyle(.yellow)
+      
+      Image(systemName: "qrcode.viewfinder")
+        .resizable()
+        .frame(width: 60/2.5, height: 60/2.5)
     }
+    .offset(x: 150, y: 315)
   }
 }
 
