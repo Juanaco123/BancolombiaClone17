@@ -7,32 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56AEF3E62C8A77C8000140A8 /* DynamicPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3D72C8A77C8000140A8 /* DynamicPassword.swift */; };
-		56AEF3E72C8A77C8000140A8 /* BCButtonGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3D92C8A77C8000140A8 /* BCButtonGrid.swift */; };
-		56AEF3E82C8A77C8000140A8 /* ProgressBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3DA2C8A77C8000140A8 /* ProgressBarIcon.swift */; };
-		56AEF3E92C8A77C8000140A8 /* BCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3DC2C8A77C8000140A8 /* BCButton.swift */; };
-		56AEF3EA2C8A77C8000140A8 /* Transaccions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3DD2C8A77C8000140A8 /* Transaccions.swift */; };
-		56AEF3EB2C8A77C8000140A8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3DE2C8A77C8000140A8 /* Home.swift */; };
+		5676A44E2CF8E347009C7C6D /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A44D2CF8E347009C7C6D /* TransactionsView.swift */; };
+		5676A4502CF8E394009C7C6D /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A44F2CF8E394009C7C6D /* ExploreView.swift */; };
+		5676A4522CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A4512CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift */; };
+		5676A4542CF8E3ED009C7C6D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A4532CF8E3EC009C7C6D /* SettingsView.swift */; };
+		5676A4562CF9008D009C7C6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A4552CF9008D009C7C6D /* ContentView.swift */; };
+		56AEF3EB2C8A77C8000140A8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3DE2C8A77C8000140A8 /* HomeView.swift */; };
 		56AEF3EC2C8A77C8000140A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AEF3E02C8A77C8000140A8 /* Preview Assets.xcassets */; };
 		56AEF3ED2C8A77C8000140A8 /* BancolombiaCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3E12C8A77C8000140A8 /* BancolombiaCloneApp.swift */; };
 		56AEF3EE2C8A77C8000140A8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AEF3E32C8A77C8000140A8 /* Colors.xcassets */; };
 		56AEF3EF2C8A77C8000140A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AEF3E42C8A77C8000140A8 /* Assets.xcassets */; };
-		56AEF3F02C8A77C8000140A8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3E52C8A77C8000140A8 /* Colors.swift */; };
+		56E961382CF8B2840079BCE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56E961372CF8B2840079BCE4 /* Localizable.strings */; };
+		56E9614C2CF8B45E0079BCE4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E9614B2CF8B45E0079BCE4 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5633F0F22C833CA70024DFA1 /* BancolombiaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BancolombiaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56AEF3D72C8A77C8000140A8 /* DynamicPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicPassword.swift; sourceTree = "<group>"; };
-		56AEF3D92C8A77C8000140A8 /* BCButtonGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCButtonGrid.swift; sourceTree = "<group>"; };
-		56AEF3DA2C8A77C8000140A8 /* ProgressBarIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarIcon.swift; sourceTree = "<group>"; };
-		56AEF3DC2C8A77C8000140A8 /* BCButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCButton.swift; sourceTree = "<group>"; };
-		56AEF3DD2C8A77C8000140A8 /* Transaccions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaccions.swift; sourceTree = "<group>"; };
-		56AEF3DE2C8A77C8000140A8 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		56451DC32CB9913800016E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5676A44D2CF8E347009C7C6D /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		5676A44F2CF8E394009C7C6D /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		5676A4512CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceduresAndApplicationsView.swift; sourceTree = "<group>"; };
+		5676A4532CF8E3EC009C7C6D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5676A4552CF9008D009C7C6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56AEF3DE2C8A77C8000140A8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		56AEF3E02C8A77C8000140A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		56AEF3E12C8A77C8000140A8 /* BancolombiaCloneApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BancolombiaCloneApp.swift; sourceTree = "<group>"; };
 		56AEF3E32C8A77C8000140A8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		56AEF3E42C8A77C8000140A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		56AEF3E52C8A77C8000140A8 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		56E961372CF8B2840079BCE4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		56E9614B2CF8B45E0079BCE4 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,44 +65,77 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56AEF3D52C8A77C8000140A8 /* BancolombiaClone */ = {
+		5676A4472CF8C137009C7C6D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				56AEF3D62C8A77C8000140A8 /* DesignSystem */,
-				56AEF3DE2C8A77C8000140A8 /* Home.swift */,
-				56AEF3DF2C8A77C8000140A8 /* Preview Content */,
-				56AEF3E12C8A77C8000140A8 /* BancolombiaCloneApp.swift */,
-				56AEF3E22C8A77C8000140A8 /* Assets */,
+				56AEF3DE2C8A77C8000140A8 /* HomeView.swift */,
 			);
-			path = BancolombiaClone;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		56AEF3D62C8A77C8000140A8 /* DesignSystem */ = {
+		5676A4482CF8E312009C7C6D /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				56AEF3D72C8A77C8000140A8 /* DynamicPassword.swift */,
-				56AEF3D82C8A77C8000140A8 /* Grids */,
-				56AEF3DA2C8A77C8000140A8 /* ProgressBarIcon.swift */,
-				56AEF3DB2C8A77C8000140A8 /* Button */,
-				56AEF3DD2C8A77C8000140A8 /* Transaccions.swift */,
+				5676A44C2CF8E33A009C7C6D /* Settings */,
+				5676A44B2CF8E32B009C7C6D /* ProceduresAndApplications */,
+				5676A44A2CF8E323009C7C6D /* Explore */,
+				5676A4492CF8E31D009C7C6D /* Transactions */,
+				5676A4472CF8C137009C7C6D /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		5676A4492CF8E31D009C7C6D /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				5676A44D2CF8E347009C7C6D /* TransactionsView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		5676A44A2CF8E323009C7C6D /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				5676A44F2CF8E394009C7C6D /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		5676A44B2CF8E32B009C7C6D /* ProceduresAndApplications */ = {
+			isa = PBXGroup;
+			children = (
+				5676A4512CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift */,
+			);
+			path = ProceduresAndApplications;
+			sourceTree = "<group>";
+		};
+		5676A44C2CF8E33A009C7C6D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5676A4532CF8E3EC009C7C6D /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5676A4572CF90D33009C7C6D /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
-		56AEF3D82C8A77C8000140A8 /* Grids */ = {
+		56AEF3D52C8A77C8000140A8 /* BancolombiaClone */ = {
 			isa = PBXGroup;
 			children = (
-				56AEF3D92C8A77C8000140A8 /* BCButtonGrid.swift */,
+				5676A4572CF90D33009C7C6D /* DesignSystem */,
+				5676A4482CF8E312009C7C6D /* Features */,
+				56451DC32CB9913800016E87 /* Info.plist */,
+				56AEF3DF2C8A77C8000140A8 /* Preview Content */,
+				56AEF3E12C8A77C8000140A8 /* BancolombiaCloneApp.swift */,
+				56AEF3E22C8A77C8000140A8 /* Assets */,
+				5676A4552CF9008D009C7C6D /* ContentView.swift */,
 			);
-			path = Grids;
-			sourceTree = "<group>";
-		};
-		56AEF3DB2C8A77C8000140A8 /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				56AEF3DC2C8A77C8000140A8 /* BCButton.swift */,
-			);
-			path = Button;
+			path = BancolombiaClone;
 			sourceTree = "<group>";
 		};
 		56AEF3DF2C8A77C8000140A8 /* Preview Content */ = {
@@ -113,11 +149,20 @@
 		56AEF3E22C8A77C8000140A8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				56E9614A2CF8B4430079BCE4 /* Generated */,
 				56AEF3E32C8A77C8000140A8 /* Colors.xcassets */,
 				56AEF3E42C8A77C8000140A8 /* Assets.xcassets */,
-				56AEF3E52C8A77C8000140A8 /* Colors.swift */,
+				56E961372CF8B2840079BCE4 /* Localizable.strings */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		56E9614A2CF8B4430079BCE4 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				56E9614B2CF8B45E0079BCE4 /* Strings.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56AEF3EC2C8A77C8000140A8 /* Preview Assets.xcassets in Resources */,
+				56E961382CF8B2840079BCE4 /* Localizable.strings in Resources */,
 				56AEF3EF2C8A77C8000140A8 /* Assets.xcassets in Resources */,
 				56AEF3EE2C8A77C8000140A8 /* Colors.xcassets in Resources */,
 			);
@@ -191,14 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56AEF3E72C8A77C8000140A8 /* BCButtonGrid.swift in Sources */,
-				56AEF3F02C8A77C8000140A8 /* Colors.swift in Sources */,
+				5676A4542CF8E3ED009C7C6D /* SettingsView.swift in Sources */,
 				56AEF3ED2C8A77C8000140A8 /* BancolombiaCloneApp.swift in Sources */,
-				56AEF3E82C8A77C8000140A8 /* ProgressBarIcon.swift in Sources */,
-				56AEF3E92C8A77C8000140A8 /* BCButton.swift in Sources */,
-				56AEF3E62C8A77C8000140A8 /* DynamicPassword.swift in Sources */,
-				56AEF3EB2C8A77C8000140A8 /* Home.swift in Sources */,
-				56AEF3EA2C8A77C8000140A8 /* Transaccions.swift in Sources */,
+				5676A4562CF9008D009C7C6D /* ContentView.swift in Sources */,
+				5676A44E2CF8E347009C7C6D /* TransactionsView.swift in Sources */,
+				56E9614C2CF8B45E0079BCE4 /* Strings.swift in Sources */,
+				5676A4522CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift in Sources */,
+				56AEF3EB2C8A77C8000140A8 /* HomeView.swift in Sources */,
+				5676A4502CF8E394009C7C6D /* ExploreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +381,7 @@
 				DEVELOPMENT_TEAM = 8STPF9VADY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BancolombiaClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +414,7 @@
 				DEVELOPMENT_TEAM = 8STPF9VADY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BancolombiaClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
