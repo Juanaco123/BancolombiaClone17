@@ -9,30 +9,38 @@ import SwiftUI
 import Foundation
 
 struct ContentView: View {
+  
+  @State private var selectedTab: Int = 0
+  
   var body: some View {
-    TabView {
-      HomeView()
-        .tabItem {
-          Label("Inicio", systemImage: "house")
-        }
-      TransactionsView()
-        .tabItem {
-          Label("Transacciones", systemImage: "creditcard")
-        }
-      ExploreView()
-        .tabItem {
-          Label("Explorar", systemImage: "square.grid.2x2")
-        }
-      ProceduresAndApplicationsView()
-        .tabItem {
-          Label("Tramites y solicitudes", systemImage: "doc.plaintext")
-        }
-      SettingsView()
-        .tabItem {
-          Label("Ajustes", systemImage: "gearshape")
-        }
+    
+    ZStack(alignment: .bottom) {
+      TabView(selection: $selectedTab) {
+        HomeView()
+          .tag(0)
+        TransactionsView()
+          .tag(1)
+        ExploreView()
+          .tag(2)
+        ProceduresAndApplicationsView()
+          .tag(3)
+        SettingsView()
+          .tag(4)
+      }
+      .tabViewStyle(.page(indexDisplayMode: .never))
+      .animation(.easeOut(duration: 0.2), value: selectedTab)
+      .transition(.slide)
+      
+      HStack(spacing: .space2x) {
+        NavBarItem(systemName: "house", text: "Inicio", tabIndex: 0, currentTab: $selectedTab)
+        NavBarItem(systemName: "creditcard", text: "Transacciones", tabIndex: 1, currentTab: $selectedTab)
+        NavBarItem(systemName: "square.grid.2x2", text: "Explorar", tabIndex: 2, currentTab: $selectedTab)
+        NavBarItem(systemName: "doc.plaintext", text: "Tramites y solicitudes", tabIndex: 3, currentTab: $selectedTab)
+        NavBarItem(systemName: "gearshape", text: "Ajustes", tabIndex: 3, currentTab: $selectedTab)
+      }
+      .frame(maxWidth: .infinity)
+      .background()
     }
-    Text("Hola c: \n\(GeneratedStrings.justALetter)")
   }
 }
 

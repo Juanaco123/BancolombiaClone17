@@ -213,7 +213,7 @@ struct HomeView: View {
         .resizable()
         .frame(width: 60/2.5, height: 60/2.5)
     }
-    .offset(x: 150, y: 315)
+    .offset(x: 150, y: 250)
   }
 }
 
