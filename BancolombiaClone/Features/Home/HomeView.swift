@@ -45,10 +45,8 @@ struct HomeView: View {
   @ViewBuilder
   var mainAction: some View {
     VStack(alignment: .leading) {
-      Text("Buenos días")
-        .font(.title)
-        .fontWeight(.thin)
-        .padding(.top, .space5x)
+      ScheduleText()
+      
       HStack {
         // Dinamic Key
         DynamicKeyView()
@@ -72,7 +70,7 @@ struct HomeView: View {
         .offset(y: -30)
       }
     }
-    .padding(.top, 20)
+    .padding(.top, .space2x)
     .padding(.horizontal)
     .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
   }
