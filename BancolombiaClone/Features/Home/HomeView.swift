@@ -51,25 +51,8 @@ struct HomeView: View {
         .padding(.top, .space5x)
       HStack {
         // Dinamic Key
-        HStack {
-          CircularTimer()
-          
-          VStack {
-            Text("Clave dinámica")
-              .font(.caption)
-              .lineLimit(1)
-            Text("123456")
-              .font(.subheadline)
-              .kerning(3)
-              .fontWeight(.bold)
-          }
-          .minimumScaleFactor(0.7)
-          Image(systemName: "chevron.forward")
-          
-        }
-        .padding(6)
-        .background(RoundedRectangle(cornerRadius: 25.0).fill(.white).shadow(radius: 1))
-        .offset(y: 25)
+        DynamicKeyView()
+          .offset(x: -10, y: 25)
         
         Spacer()
         

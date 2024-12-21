@@ -82,7 +82,7 @@
 		5676A4472CF8C137009C7C6D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				568F4D822D160ABF0080AA57 /* DinamycKey */,
+				568F4D822D160ABF0080AA57 /* DynamycKey */,
 				56AEF3DE2C8A77C8000140A8 /* HomeView.swift */,
 			);
 			path = Home;
@@ -159,13 +159,13 @@
 			path = Texts;
 			sourceTree = "<group>";
 		};
-		568F4D822D160ABF0080AA57 /* DinamycKey */ = {
+		568F4D822D160ABF0080AA57 /* DynamycKey */ = {
 			isa = PBXGroup;
 			children = (
 				568F4D802D160ABC0080AA57 /* DynamicKeyView.swift */,
 				568F4D832D160AD50080AA57 /* CircularTimer.swift */,
 			);
-			path = DinamycKey;
+			path = DynamycKey;
 			sourceTree = "<group>";
 		};
 		56AEF3D52C8A77C8000140A8 /* BancolombiaClone */ = {

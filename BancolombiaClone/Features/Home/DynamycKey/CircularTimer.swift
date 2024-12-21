@@ -13,12 +13,16 @@ struct CircularTimer: View {
   private var seconds: Double = 10
   private var timer: Publishers.Autoconnect<Timer.TimerPublisher> = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
   
+  var onTimerComplete: (() -> Void)?
+  
   @State private var progress: CGFloat = 0
   
   // constant
   private let icon: String = "lock"
   
-  init() {}
+  init(onTimerComplete: (() -> Void)? = nil) {
+    self.onTimerComplete = onTimerComplete
+  }
   
   var body: some View {
     ZStack {
@@ -41,7 +45,11 @@ struct CircularTimer: View {
     }
     .onReceive(timer, perform: { _ in
       withAnimation {
-        progress = (progress + 1/seconds).truncatingRemainder(dividingBy: 1.0)
+        progress = (progress + 1/seconds)
+        if progress >= 1.0 {
+          progress = 0
+          onTimerComplete?()
+        }
       }
     })
   }
