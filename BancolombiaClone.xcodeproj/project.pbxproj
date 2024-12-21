@@ -15,6 +15,8 @@
 		5676A45A2CF91DBD009C7C6D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A4592CF91DBD009C7C6D /* CustomButton.swift */; };
 		5676A45D2CF91E11009C7C6D /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A45C2CF91E11009C7C6D /* CustomText.swift */; };
 		568F4D502D15F5540080AA57 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F4D4F2D15F5540080AA57 /* Extensions.swift */; };
+		568F4D812D160ABC0080AA57 /* DynamicKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F4D802D160ABC0080AA57 /* DynamicKeyView.swift */; };
+		568F4D842D160AD50080AA57 /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568F4D832D160AD50080AA57 /* CircularTimer.swift */; };
 		56AEF3EB2C8A77C8000140A8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3DE2C8A77C8000140A8 /* HomeView.swift */; };
 		56AEF3EC2C8A77C8000140A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AEF3E02C8A77C8000140A8 /* Preview Assets.xcassets */; };
 		56AEF3ED2C8A77C8000140A8 /* BancolombiaCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AEF3E12C8A77C8000140A8 /* BancolombiaCloneApp.swift */; };
@@ -37,6 +39,8 @@
 		5676A4592CF91DBD009C7C6D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		5676A45C2CF91E11009C7C6D /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 		568F4D4F2D15F5540080AA57 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		568F4D802D160ABC0080AA57 /* DynamicKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicKeyView.swift; sourceTree = "<group>"; };
+		568F4D832D160AD50080AA57 /* CircularTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimer.swift; sourceTree = "<group>"; };
 		56AEF3DE2C8A77C8000140A8 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		56AEF3E02C8A77C8000140A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		56AEF3E12C8A77C8000140A8 /* BancolombiaCloneApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BancolombiaCloneApp.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		5676A4472CF8C137009C7C6D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				568F4D822D160ABF0080AA57 /* DinamycKey */,
 				56AEF3DE2C8A77C8000140A8 /* HomeView.swift */,
 			);
 			path = Home;
@@ -152,6 +157,15 @@
 				5676A45C2CF91E11009C7C6D /* CustomText.swift */,
 			);
 			path = Texts;
+			sourceTree = "<group>";
+		};
+		568F4D822D160ABF0080AA57 /* DinamycKey */ = {
+			isa = PBXGroup;
+			children = (
+				568F4D802D160ABC0080AA57 /* DynamicKeyView.swift */,
+				568F4D832D160AD50080AA57 /* CircularTimer.swift */,
+			);
+			path = DinamycKey;
 			sourceTree = "<group>";
 		};
 		56AEF3D52C8A77C8000140A8 /* BancolombiaClone */ = {
@@ -296,7 +310,9 @@
 				56D2FF9E2D15D62A00A20F18 /* Dimensions.swift in Sources */,
 				56D2FF9A2D15D2BC00A20F18 /* NavBarItem.swift in Sources */,
 				5676A4502CF8E394009C7C6D /* ExploreView.swift in Sources */,
+				568F4D842D160AD50080AA57 /* CircularTimer.swift in Sources */,
 				5676A45D2CF91E11009C7C6D /* CustomText.swift in Sources */,
+				568F4D812D160ABC0080AA57 /* DynamicKeyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

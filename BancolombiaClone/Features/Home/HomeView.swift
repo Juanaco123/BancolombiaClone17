@@ -24,7 +24,7 @@ struct HomeView: View {
           //MARK: - NavBar
           ToolbarItem(placement: .topBarLeading) {
             Text("Bankclone")
-              .font(.title)
+              .font(.headline)
               .fontWeight(.bold)
           }
           ToolbarItem(placement: .topBarTrailing) {
@@ -38,7 +38,7 @@ struct HomeView: View {
       }
       QRButton
     }
-    .padding(.horizontal, 10)
+    .padding(.horizontal, .space4x)
   }
   
   //MARK: - Login and dinamic key
@@ -48,36 +48,22 @@ struct HomeView: View {
       Text("Buenos días")
         .font(.title)
         .fontWeight(.thin)
-        .padding(.top, 10)
+        .padding(.top, .space5x)
       HStack {
         // Dinamic Key
         HStack {
-          ZStack {
-            Circle()
-              .stroke(lineWidth: 5)
-              .foregroundStyle(Color(UIColor.systemGray5))
-              .frame(width: 40, height: 40)
-            
-            Circle()
-              .trim(from: 0.0, to: 10)
-              .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round))
-              .foregroundStyle(.yellow)
-              .rotationEffect(.degrees(-90))
-              .frame(width: 40, height: 40)
-              .animation(.linear(duration: 10), value: 10)
-            
-            Image(systemName: "lock")
-              .frame(width: 40/2.5, height: 40/2.5)
-              .foregroundStyle(.blue)
-          }
+          CircularTimer()
           
           VStack {
             Text("Clave dinámica")
               .font(.caption)
+              .lineLimit(1)
             Text("123456")
+              .font(.subheadline)
               .kerning(3)
               .fontWeight(.bold)
           }
+          .minimumScaleFactor(0.7)
           Image(systemName: "chevron.forward")
           
         }
