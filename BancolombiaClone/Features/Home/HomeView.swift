@@ -9,10 +9,21 @@ import UIKit
 import SwiftUI
 
 struct HomeView: View {
+  
+  // Constant
+  private let loginText: String = "Iniciar sesión"
+  private let loginIcon: String = "rectangle.portrait.and.arrow.forward"
+  private let categories: [(String, String)] = [
+    ("banknote", "Ver saldos y movimientos"),
+    ("paperplane", "Transferir dinero"),
+    ("creditcard", "Pagar tarjetas de crédito y créditos"),
+    ("newspaper" ,"Pagar y administrar facturas")
+  ]
+  
   var body: some View {
     ZStack {
       NavigationStack {
-        ScrollView(.vertical) {
+        ScrollView(.vertical, showsIndicators: false) {
           VStack(alignment: .leading, spacing: 0) {
             mainAction
             mainTransactions
@@ -38,7 +49,7 @@ struct HomeView: View {
       }
       QRButton
     }
-    .padding(.horizontal, .space4x)
+    .ignoresSafeArea(.all)
   }
   
   //MARK: - Login and dinamic key
@@ -50,28 +61,21 @@ struct HomeView: View {
       HStack {
         // Dinamic Key
         DynamicKeyView()
-          .offset(x: -10, y: 25)
+          .offset(y: 25)
         
         Spacer()
         
         // Login button
-        HStack {
-          Text("Iniciar sesión")
-            .font(.headline)
-            .fontWeight(.bold)
-          Image(.systemLogin)
-            .resizable()
-            .frame(width: 20, height: 20)
-        }
-        .foregroundStyle(.white)
-        .padding(10)
-        .background(.black)
-        .clipShape(.rect(cornerRadius: 20))
+        CustomButton(
+          icon: loginIcon,
+          text: loginText,
+          style: .login
+        )
         .offset(y: -30)
       }
     }
     .padding(.top, .space2x)
-    .padding(.horizontal)
+    .padding(.horizontal, .space4x)
     .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
   }
   
@@ -85,16 +89,17 @@ struct HomeView: View {
         .padding(.leading, 15)
       
       ScrollView(.horizontal) {
-        HStack(spacing: 10) {
-          ForEach((1...5), id: \.self) { item in
-            Text(String(item))
-              .frame(width: 85, height: 100, alignment: .center)
-              .background(.blue)
-              .cornerRadius(10)
-              .foregroundColor(.white)
-              .font(.title)
+        HStack(spacing: .space5x) {
+          ForEach( categories, id: \.0 ) { icon, category in
+            CustomButton(
+              icon: icon,
+              text: category,
+              style: .principal
+            )
           }
         }
+        .padding(.leading, .space4x)
+        .padding(.vertical, .space1x)
       }
       .padding(.top, 10)
       .scrollIndicators(.hidden)
@@ -106,7 +111,7 @@ struct HomeView: View {
   //MARK: - More categories
   @ViewBuilder
   var moreCategories: some View {
-    VStack(alignment: .leading, spacing: 20) {
+    VStack(alignment: .leading, spacing: .space5x) {
       Text("Explora nuestras categorías")
         .font(.headline)
         .fontWeight(.thin)
@@ -115,19 +120,18 @@ struct HomeView: View {
       
       LazyVGrid(
         columns: [GridItem(.adaptive(minimum: 90))],
-        spacing: 10
+        spacing: .space2x
       ) {
         ForEach((1...5), id: \.self) { item in
           Text(String(item))
             .frame(width: 60, height: 70, alignment: .center)
             .background(.blue)
-            .cornerRadius(10)
+            .clipShape(Circle())
             .foregroundColor(.white)
             .font(.title)
         }
       }
       .padding(.vertical)
-      .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
     }
     .padding(.horizontal, 5)
     .padding(.top, 10)
@@ -154,12 +158,12 @@ struct HomeView: View {
               .font(.title)
           }
         }
+        .padding(.leading, .space4x)
       }
       .scrollIndicators(.hidden)
       .ignoresSafeArea(.all)
       
     }
-    .padding(.horizontal, 10)
     .padding(.bottom, 20)
   }
   

@@ -9,6 +9,7 @@ import Foundation
 
 public extension CGFloat {
   
+  // Spacing
   /// 4.0
   static let space1x = 4.0
   /// 8.0
@@ -24,4 +25,11 @@ public extension CGFloat {
   /// 40.0
   static let space10x = 40.0
   
+  // Radius
+  static let radius4 = 4.0
+  /// 10.0
+  static let radius10 = 10.0
+  
+  // Button
+  static let capsuleButton = 200.0
 }

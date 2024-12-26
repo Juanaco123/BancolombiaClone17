@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565CA9622D18ABC5004EDE53 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565CA9612D18ABC5004EDE53 /* ButtonStyle.swift */; };
 		5676A44E2CF8E347009C7C6D /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A44D2CF8E347009C7C6D /* TransactionsView.swift */; };
 		5676A4502CF8E394009C7C6D /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A44F2CF8E394009C7C6D /* ExploreView.swift */; };
 		5676A4522CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A4512CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		5633F0F22C833CA70024DFA1 /* BancolombiaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BancolombiaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56451DC32CB9913800016E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		565CA9612D18ABC5004EDE53 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		5676A44D2CF8E347009C7C6D /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		5676A44F2CF8E394009C7C6D /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		5676A4512CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceduresAndApplicationsView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5676A4592CF91DBD009C7C6D /* CustomButton.swift */,
+				565CA9612D18ABC5004EDE53 /* ButtonStyle.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				5676A45A2CF91DBD009C7C6D /* CustomButton.swift in Sources */,
 				5676A4562CF9008D009C7C6D /* ContentView.swift in Sources */,
 				5676A44E2CF8E347009C7C6D /* TransactionsView.swift in Sources */,
+				565CA9622D18ABC5004EDE53 /* ButtonStyle.swift in Sources */,
 				56E9614C2CF8B45E0079BCE4 /* Strings.swift in Sources */,
 				5676A4522CF8E3C1009C7C6D /* ProceduresAndApplicationsView.swift in Sources */,
 				56AEF3EB2C8A77C8000140A8 /* HomeView.swift in Sources */,

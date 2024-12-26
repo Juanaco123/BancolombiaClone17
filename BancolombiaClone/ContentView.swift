@@ -29,7 +29,7 @@ struct ContentView: View {
             .tag(4)
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .animation(.easeOut(duration: 0.2), value: selectedTab)
+        .animation(.easeOut(duration: 0.5), value: selectedTab)
         .transition(.slide)
         
         Spacer(minLength: 50)
