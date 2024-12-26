@@ -22,6 +22,10 @@ public extension CGFloat {
   static let space5x = 20.0
   /// 24.0
   static let space6x = 24.0
+  /// 28.0
+  static let space7x = 28.0
+  /// 32.0
+  static let space8x = 32.0
   /// 40.0
   static let space10x = 40.0
   

@@ -13,11 +13,18 @@ struct HomeView: View {
   // Constant
   private let loginText: String = "Iniciar sesión"
   private let loginIcon: String = "rectangle.portrait.and.arrow.forward"
-  private let categories: [(String, String)] = [
+  private let transactions: [(String, String)] = [
     ("banknote", "Ver saldos y movimientos"),
     ("paperplane", "Transferir dinero"),
     ("creditcard", "Pagar tarjetas de crédito y créditos"),
     ("newspaper" ,"Pagar y administrar facturas")
+  ]
+  private let categories: [(String, String, circleColors)] = [
+    ("target", "Gestionar día a día", .thistle),
+    ("house", "Hogar y servicios", .tiffBlue),
+    ("car", "Transporte", .sand),
+    ("star", "Para ti", .vanilla),
+    ("menucard", "Trámites y solicitudes", .sky)
   ]
   
   var body: some View {
@@ -25,6 +32,8 @@ struct HomeView: View {
       NavigationStack {
         ScrollView(.vertical, showsIndicators: false) {
           VStack(alignment: .leading, spacing: 0) {
+            Spacer(minLength: 50)
+            
             mainAction
             mainTransactions
             moreCategories
@@ -34,9 +43,10 @@ struct HomeView: View {
         .toolbar {
           //MARK: - NavBar
           ToolbarItem(placement: .topBarLeading) {
-            Text("Bankclone")
+            Text("Banklone")
               .font(.headline)
               .fontWeight(.bold)
+              .padding(.leading, .space4x)
           }
           ToolbarItem(placement: .topBarTrailing) {
             HStack(spacing: 16) {
@@ -90,10 +100,10 @@ struct HomeView: View {
       
       ScrollView(.horizontal) {
         HStack(spacing: .space5x) {
-          ForEach( categories, id: \.0 ) { icon, category in
+          ForEach( transactions, id: \.0 ) { icon, transaction in
             CustomButton(
               icon: icon,
-              text: category,
+              text: transaction,
               style: .principal
             )
           }
@@ -120,15 +130,14 @@ struct HomeView: View {
       
       LazyVGrid(
         columns: [GridItem(.adaptive(minimum: 90))],
-        spacing: .space2x
+        spacing: .zero
       ) {
-        ForEach((1...5), id: \.self) { item in
-          Text(String(item))
-            .frame(width: 60, height: 70, alignment: .center)
-            .background(.blue)
-            .clipShape(Circle())
-            .foregroundColor(.white)
-            .font(.title)
+        ForEach( categories, id: \.0) { icon, category, color in
+          CustomButton(
+            icon: icon,
+            text: category,
+            style: .category(color)
+          )
         }
       }
       .padding(.vertical)
@@ -145,6 +154,7 @@ struct HomeView: View {
         .font(.headline)
         .fontWeight(.thin)
         .padding(.vertical, 20)
+        .padding(.leading, .space4x)
       
       // Card View
       ScrollView(.horizontal) {
@@ -164,7 +174,7 @@ struct HomeView: View {
       .ignoresSafeArea(.all)
       
     }
-    .padding(.bottom, 20)
+    .padding(.bottom, .space10x)
   }
   
   //MARK: - QR

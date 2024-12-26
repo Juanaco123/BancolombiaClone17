@@ -34,7 +34,7 @@ struct CustomButton: View {
   var body: some View {
     switch style.shape {
     case .circle:
-      VStack(spacing: .space2x) {
+      VStack(spacing: .zero) {
         Button {
           action()
         } label: {
@@ -44,6 +44,7 @@ struct CustomButton: View {
         .buttonStyle(setButtonStyle(style: style))
         
         Text(text)
+          .multilineTextAlignment(.center)
           .applyDynamicTextHandling(for: text)
           .frame(width: textFrameWidth)
       }
@@ -89,7 +90,7 @@ struct CustomButton_Preview: PreviewProvider {
       CustomButton(
         icon: "book.pages",
         text: "Ver saldos y movimientos",
-        style: .category
+        style: .category(.sky)
       )
       CustomButton(
         icon: "book.pages",

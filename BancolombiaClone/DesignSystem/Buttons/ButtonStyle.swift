@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-enum circleColors: Hashable {
+enum circleColors: CaseIterable {
   case thistle
   case tiffBlue
   case vanilla
@@ -50,7 +50,9 @@ struct BankButtonStyle {
   
   static let principal = BankButtonStyle(backgroundColor: .milk, foregroundColor: .carbon, shape: .roundedRect(cornerRadius: .space2x))
   
-  static let category = BankButtonStyle(backgroundColor: .milk, foregroundColor: .carbon, shape: .circle)
+  static func category(_ color: circleColors) -> BankButtonStyle {
+    return BankButtonStyle(backgroundColor: color.color, foregroundColor: .carbon, shape: .circle)
+  }
   
   static let login = BankButtonStyle(backgroundColor: .carbon, foregroundColor: .milk, shape: .capsule)
   
