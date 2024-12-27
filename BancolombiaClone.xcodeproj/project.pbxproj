@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56255D992D1E086A00DD7780 /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56255D982D1E086A00DD7780 /* CustomCard.swift */; };
 		565CA9622D18ABC5004EDE53 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565CA9612D18ABC5004EDE53 /* ButtonStyle.swift */; };
 		5676A44E2CF8E347009C7C6D /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A44D2CF8E347009C7C6D /* TransactionsView.swift */; };
 		5676A4502CF8E394009C7C6D /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676A44F2CF8E394009C7C6D /* ExploreView.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56255D982D1E086A00DD7780 /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
 		5633F0F22C833CA70024DFA1 /* BancolombiaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BancolombiaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56451DC32CB9913800016E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		565CA9612D18ABC5004EDE53 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56255D972D1E085A00DD7780 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				56255D982D1E086A00DD7780 /* CustomCard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		5633F0E92C833CA70024DFA1 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 		5676A4572CF90D33009C7C6D /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				56255D972D1E085A00DD7780 /* Card */,
 				56D2FF9C2D15D61700A20F18 /* UI */,
 				56D2FF982D15D2AD00A20F18 /* NavBar */,
 				5676A45B2CF91E04009C7C6D /* Texts */,
@@ -318,6 +329,7 @@
 				56D2FF9A2D15D2BC00A20F18 /* NavBarItem.swift in Sources */,
 				5676A4502CF8E394009C7C6D /* ExploreView.swift in Sources */,
 				568F4D842D160AD50080AA57 /* CircularTimer.swift in Sources */,
+				56255D992D1E086A00DD7780 /* CustomCard.swift in Sources */,
 				5676A45D2CF91E11009C7C6D /* CustomText.swift in Sources */,
 				568F4D812D160ABC0080AA57 /* DynamicKeyView.swift in Sources */,
 				56B27E802D174413009037B7 /* ScheduleText.swift in Sources */,

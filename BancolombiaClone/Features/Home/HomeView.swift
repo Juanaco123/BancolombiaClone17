@@ -26,20 +26,32 @@ struct HomeView: View {
     ("star", "Para ti", .vanilla),
     ("menucard", "Trámites y solicitudes", .sky)
   ]
+  private let recommendationsInfo: [(String, String, String, String, ImageResource)] = [
+    ("Hola! soy Juan", "Programador Junior iOS, con ganas de aprender muchas cosas", "Mira mi CV", "https://www.google.com", .happyperson),
+    ("Checa mi repositorio", "Aquí encontrarás pequeños proyectos independientes, y también con recursos de varios cursos que hice", "Conoce mi repo", "https://www.google.com", .repository),
+    ("Sígueme en Linkedin :)", "Puedes revisar mi perfil profesional en linkedin", "Conoce Taklone", "https://www.google.com", .linkedinlogo),
+    ("¿Qué otras cosas me gustan?", "Entre otras, los videojuegos, escuchar música, leer, y muchas otras cosas. Te comparto la última canción que escuché", "Escúchala", "https://www.google.com", .guitar),
+    ("¡Un saludo!", "Te invito a conocer el resto de este clon que hice con fines de aprendizaje c:", "O revisa otros de mis proyectos", "https://www.google.com", .greetings)
+  ]
   
   var body: some View {
     ZStack {
       NavigationStack {
         ScrollView(.vertical, showsIndicators: false) {
           VStack(alignment: .leading, spacing: 0) {
-            Spacer(minLength: 50)
+            Spacer(minLength: .space10x)
             
             mainAction
+              .background(.milk)
+            
             mainTransactions
             moreCategories
             recommendations
           }
         }
+        .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarColorScheme(.light, for: .navigationBar)
         .toolbar {
           //MARK: - NavBar
           ToolbarItem(placement: .topBarLeading) {
@@ -86,7 +98,6 @@ struct HomeView: View {
     }
     .padding(.top, .space2x)
     .padding(.horizontal, .space4x)
-    .background(Color(UIColor.systemGray6).ignoresSafeArea(edges: .all))
   }
   
   //MARK: - Main Transactions
@@ -125,14 +136,15 @@ struct HomeView: View {
       Text("Explora nuestras categorías")
         .font(.headline)
         .fontWeight(.thin)
-        .padding(.leading, 15)
-        .padding(.top, 15)
+        .padding(.leading, .space4x)
+        .padding(.top, .space4x)
       
       LazyVGrid(
         columns: [GridItem(.adaptive(minimum: 90))],
         spacing: .zero
       ) {
-        ForEach( categories, id: \.0) { icon, category, color in
+        ForEach( categories.indices, id: \.self) { index in
+          let (icon, category, color) = categories[index]
           CustomButton(
             icon: icon,
             text: category,
@@ -140,10 +152,12 @@ struct HomeView: View {
           )
         }
       }
-      .padding(.vertical)
+      .padding(.horizontal, .space4x)
+      .padding(.vertical, .space1x)
+      .background(.milk)
     }
-    .padding(.horizontal, 5)
-    .padding(.top, 10)
+    .padding(.top, .space2x)
+    .padding(.bottom, .space2x)
   }
   
   //MARK: - Recommendations
@@ -153,21 +167,23 @@ struct HomeView: View {
       Text("Pensando en ti te recomendamos")
         .font(.headline)
         .fontWeight(.thin)
-        .padding(.vertical, 20)
         .padding(.leading, .space4x)
       
       // Card View
       ScrollView(.horizontal) {
-        HStack(spacing: 10) {
-          ForEach((1...5), id: \.self) { item in
-            Text(String(item))
-              .frame(width: 370, height: 200, alignment: .center)
-              .background(.blue)
-              .cornerRadius(5)
-              .foregroundColor(.white)
-              .font(.title)
+        HStack(spacing: .space4x) {
+          ForEach( recommendationsInfo.indices, id: \.self) { index in
+            let (title, text, textLink, url, image) = recommendationsInfo[index]
+            CustomCard(
+              title: title,
+              text: text,
+              textLink: textLink,
+              link: url,
+              image: image
+            )
           }
         }
+        .padding(.vertical, .space2x)
         .padding(.leading, .space4x)
       }
       .scrollIndicators(.hidden)
@@ -194,7 +210,7 @@ struct HomeView: View {
         .resizable()
         .frame(width: 60/2.5, height: 60/2.5)
     }
-    .offset(x: 150, y: 250)
+    .offset(x: 150, y: 280)
   }
 }
 

@@ -36,4 +36,14 @@ public extension CGFloat {
   
   // Button
   static let capsuleButton = 200.0
+  
+  // Size
+  /// 14
+  static let size14 = 14.0
+  /// 20
+  static let size20 = 20.0
+  /// 28
+  static let size28 = 28.0
+  /// 32.0
+  static let size32 = 32.0
 }
